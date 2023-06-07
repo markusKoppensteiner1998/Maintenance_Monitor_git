@@ -56,4 +56,32 @@ class MaintenanceMonitorControllerTest {
         //Assert
         assertEquals("ok",result);
     }
+
+
+    @Test
+    void CheckResetMessage(){
+        //Arrange
+        MaintenanceMonitorController maintanenceController = new MaintenanceMonitorController();
+
+        //Act
+        maintanenceController.setMessage("Wir haben ein Problem!");
+        maintanenceController.resetMessage();
+        String result = maintanenceController.getMessage();
+
+        //Assert
+        assertEquals("Everything works as expected",result);
+    }
+
+    @Test
+    void CheckReturnValueOfResetMessage(){
+        //Arrange
+        MaintenanceMonitorController maintanenceController = new MaintenanceMonitorController();
+
+        //Act
+        String result = maintanenceController.resetMessage();
+
+        //Assert
+        assertEquals("ok",result);
+    }
+
 }
