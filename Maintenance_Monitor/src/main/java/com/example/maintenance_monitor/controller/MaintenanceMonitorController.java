@@ -1,6 +1,7 @@
 package com.example.maintenance_monitor.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -10,5 +11,13 @@ public class MaintenanceMonitorController {
     public String getMessage() {
         return message;
     }
+
+
+    @RequestMapping("/api/message/set")
+    public String setMessage(@RequestParam String m) {
+        this.message = m;
+        return "ok";
+    }
+
 
 }
