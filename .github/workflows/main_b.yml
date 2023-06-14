@@ -9,6 +9,8 @@
 name: Verify Main Branch
 
 on:
+  push:
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
