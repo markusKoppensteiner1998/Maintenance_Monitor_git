@@ -30,7 +30,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B verify --file Maintenance_Monitor/pom.xml
       
-    - run: mkdir Maintenance_Monitor/download && cp Maintenance_Monitor/target/*.jar download
+    - run: mkdir Maintenance_Monitor/download && cp Maintenance_Monitor/target/*.jar Maintenance_Monitor/download
     - name: Upload a build Artifact
       uses: actions/upload-artifact@v3
       with:
