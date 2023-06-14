@@ -30,7 +30,7 @@ jobs:
       
     - run: mkdir Maintenance_Monitor/download && cp Maintenance_Monitor/target /*.jar download
     - name: Upload a build Artifact
-      uses: action/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
       #Artifact name
        name: Build
